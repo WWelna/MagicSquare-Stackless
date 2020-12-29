@@ -52,8 +52,8 @@ def checksquare(p, s, n):
     for r in d:
         if sum(r) != s:
             return False
-    d2 = sum(p[x][x] for x in range(3))
-    d1 = sum(p[x][3-x-1] for x in range(3))
+    d2 = sum(p[x][x] for x in range(n))
+    d1 = sum(p[x][n-x-1] for x in range(n))
     if d1 == s and d2 == s:
         return p
     else: return False
